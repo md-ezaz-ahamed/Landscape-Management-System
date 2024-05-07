@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nurani Garden Centre</title>
+
+	<link rel="icon" type="image/x-icon" href="/images/leaf.png">
+
+	<link rel="stylesheet" href="css/signin.css">
+	<style>
+		.login {
+			width: auto;
+			color: white;
+			font-family: 'Montserrat', sans-serif;
+			border-radius: 20px;
+			background-color: green;
+			font-size: 12px;
+			font-weight: bold;
+			padding: 12px 45px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			transition: transform 80ms ease-in;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container" id="container">
+		<div class="form-container sign-up-container">
+			<form action="signup.php" method="POST">
+				<h1>Create Account</h1>
+
+				<input type="text" required data-error="Please enter your name" name="outName" placeholder="Name" />
+				<input type="email" required data-error="Please enter your Email" name="outMail"
+					placeholder="Email: example@gmail.com" />
+				<input type="password" name="outPass" required data-error="Please enter your password"
+					placeholder="Password" />
+				<input type="submit" name="signUp" value="Sign Up" class="login">
+				<!-- <button name="signup">Sign Up</button> -->
+			</form>
+		</div>
+		<div class="form-container sign-in-container">
+			<form action="login.php" method="POST">
+				<h1>Sign in</h1>
+
+				<input type="email" name="inMail" required data-error="Please enter your Email"
+					placeholder="Email: example@gmail.com" />
+				<input type="password" required data-error="Please enter your password" name="inPass"
+					placeholder="Password" />
+				<a href="#">Forgot your password?</a>
+				<input type="submit" name="signIn" value="Sign In" class="login">
+				<!-- <button name="signIn">Sign In</button> -->
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>Welcome Back!</h1>
+					<p>To keep connected with us please login with your personal info</p>
+					<button class="ghost" id="signIn">Sign In</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>Hello, Friend!</h1>
+					<p>Enter your personal details and start journey with us</p>
+					<button class="ghost" id="signUp">Sign Up</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/signin.js"></script>
+</body>
+
+</html>
